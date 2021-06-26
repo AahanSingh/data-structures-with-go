@@ -56,11 +56,13 @@ func InsertAtP(head **Node, p int, x int) {
 		fmt.Println("Positions start at 1")
 		return
 	}
-	current := *head
-	if current == nil {
-		fmt.Println("List is empty")
+	tmp := Node{Data: x, Next: nil}
+	if p == 1 && *head == nil {
+		fmt.Println("\nInserting", tmp, "at the position", p)
+		*head = &tmp
 		return
 	}
+	current := *head
 	for i := 1; i < p; i++ {
 		if current == nil {
 			fmt.Println("Position Not Found")
@@ -68,7 +70,6 @@ func InsertAtP(head **Node, p int, x int) {
 		}
 		current = current.Next
 	}
-	tmp := Node{Data: x, Next: nil}
 	fmt.Println("\nInserting", tmp, "at the position", p)
 	tmp.Next = current.Next
 	current.Next = &tmp

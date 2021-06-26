@@ -38,7 +38,6 @@ func InsertAtEnd(head *Node, x int) *Node {
 	fmt.Println("Address of head pointer ", &head)
 	fmt.Println("Returning")
 	return head
-
 }
 func InsertAtStart(head **Node, x int) {
 	tmp := Node{Data: x, Next: nil}

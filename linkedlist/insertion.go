@@ -52,6 +52,10 @@ func InsertAtStart(head **Node, x int) {
 }
 
 func InsertAtP(head **Node, p int, x int) {
+	if p < 1 {
+		fmt.Println("Positions start at 1")
+		return
+	}
 	current := *head
 	if current == nil {
 		fmt.Println("List is empty")

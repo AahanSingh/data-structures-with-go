@@ -6,6 +6,7 @@ import "fmt"
 func InsertAtEndInPlace(head **Node, x int) {
 	fmt.Println("\nIn InsertAtEndInPlace:")
 	tmp := Node{Next: nil, Data: x}
+	fmt.Println("Inserting", tmp, "at the end")
 	if *head == nil {
 		*head = &tmp
 	} else {
@@ -17,13 +18,14 @@ func InsertAtEndInPlace(head **Node, x int) {
 	}
 	fmt.Printf("Address of head node %p\n", &**head)
 	fmt.Println("Address of head pointer ", &*head)
-	fmt.Println("Exiting")
+	fmt.Println("Returning")
 }
 
 // This returns the head
 func InsertAtEnd(head *Node, x int) *Node {
 	fmt.Println("\nIn InsertAtEnd:")
 	tmp := Node{Next: nil, Data: x}
+	fmt.Println("Inserting", tmp, "at the end")
 	current := head
 	if head == nil {
 		head = &tmp
@@ -34,7 +36,7 @@ func InsertAtEnd(head *Node, x int) *Node {
 	}
 	fmt.Printf("Address of node %p\n", &*head)
 	fmt.Println("Address of head pointer ", &head)
-	fmt.Println("Exiting")
+	fmt.Println("Returning")
 	return head
 
 }

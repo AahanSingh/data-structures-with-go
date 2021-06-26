@@ -9,17 +9,15 @@ type Node struct {
 
 func DisplayList(head *Node) {
 	fmt.Printf("The list is: ")
-	current := head
-	for ; current != nil; current = current.Next {
-		fmt.Print(current.Data, " ")
+	for ; head != nil; head = head.Next {
+		fmt.Print(head.Data, " ")
 	}
 	fmt.Println()
 }
 
 func Length(head *Node) int {
-	current := head
 	len := 0
-	for ; current != nil; current = current.Next {
+	for ; head != nil; head = head.Next {
 		len++
 	}
 	fmt.Println("Length = ", len)

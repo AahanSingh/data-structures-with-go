@@ -43,12 +43,11 @@ func InsertAtEnd(head *Node, x int) *Node {
 func InsertAtStart(head **Node, x int) {
 	tmp := Node{Data: x, Next: nil}
 	fmt.Println("\nInserting", tmp, "at the start")
-	current := *head
-	if current == nil {
-		current = &tmp
+	if *head == nil {
+		*head = &tmp
 		return
 	}
-	tmp.Next = current
+	tmp.Next = *head
 	*head = &tmp
 }
 

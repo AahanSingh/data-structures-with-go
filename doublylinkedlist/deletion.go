@@ -77,8 +77,6 @@ func DeleteAtP(head **DLNode, p int) {
 	}
 }
 
-// DeleteList will delete the entire linkedlist.
-// Deletion is inplace
 func DeleteList(head **DLNode) {
 	fmt.Println("\nDeleting entire linkedlist")
 	var aux *DLNode

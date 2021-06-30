@@ -88,6 +88,11 @@ func DeleteLast(head **Node) {
 		fmt.Println("\nList is empty")
 		return
 	}
+	// If there is only 1 node in the list
+	if (*head).Next == nil {
+		*head = nil
+		return
+	}
 	current := (*head).Next
 	previous := *head
 	for ; current.Next != nil; current = current.Next {

@@ -48,7 +48,7 @@ func DeleteFirstInPlace(head **Node) {
 	*head = (**head).Next
 }
 
-// DeleteAtP deletes the node located at index loction 'p'.
+// DeleteAtP deletes the node located at index location 'p'.
 // Deletion is inplace.
 func DeleteAtP(head **Node, p int) {
 	if p == 0 {
@@ -65,7 +65,7 @@ func DeleteAtP(head **Node, p int) {
 		return
 	}
 	i := 1
-	previous := &Node{}
+	var previous *Node = nil
 	current := *head
 	for current != nil && i < p {
 		previous = current

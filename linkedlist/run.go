@@ -44,4 +44,9 @@ func RunDemo() {
 
 	DeleteList(&p)
 	DisplayList(p)
+
+	InsertAtStart(&p, 1)
+	DisplayList(p)
+	DeleteAtP(&p, 2)
+	DisplayList(p)
 }

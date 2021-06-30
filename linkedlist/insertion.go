@@ -63,13 +63,19 @@ func InsertAtP(head **Node, p int, x int) {
 		*head = &tmp
 		return
 	}
+	if *head == nil {
+		fmt.Println("Invalid Position")
+		return
+	}
 	current := *head
-	for i := 1; i < p-1; i++ {
-		if current == nil {
-			fmt.Println("Position Not Found")
-			return
-		}
+	i := 1
+	for i < p-1 && current.Next != nil {
 		current = current.Next
+		i++
+	}
+	if i < p-1 {
+		fmt.Println("Invalid Position")
+		return
 	}
 	fmt.Println("\nInserting", tmp, "at the position", p)
 	tmp.Next = current.Next

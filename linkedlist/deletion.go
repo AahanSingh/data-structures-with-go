@@ -51,7 +51,7 @@ func DeleteFirstInPlace(head **Node) {
 // DeleteAtP deletes the node located at index location 'p'.
 // Deletion is inplace.
 func DeleteAtP(head **Node, p int) {
-	if p == 0 {
+	if p < 1 {
 		fmt.Println("\nPositions start from 1. Cannot delete.")
 		return
 	}

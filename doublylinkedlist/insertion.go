@@ -35,13 +35,8 @@ func InsertAtP(head **DLNode, p int, x int) {
 		return
 	}
 
-	tmp := &DLNode{Data: x}
 	if p == 1 {
-		tmp.Next = *head
-		if *head != nil {
-			(*head).Prev = tmp
-		}
-		*head = tmp
+		InsertAtStart(head, x)
 		return
 	}
 	if *head == nil {
@@ -60,6 +55,7 @@ func InsertAtP(head **DLNode, p int, x int) {
 		fmt.Println("Invalid Position")
 		return
 	}
+	tmp := &DLNode{Data: x}
 	fmt.Println("Inserting", tmp, "at position", p)
 	tmp.Prev = current
 	tmp.Next = current.Next

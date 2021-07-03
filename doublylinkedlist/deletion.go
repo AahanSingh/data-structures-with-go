@@ -82,7 +82,6 @@ func DeleteList(head **DLNode) {
 	var aux *DLNode
 	for (*head) != nil {
 		aux = (*head).Next
-		*head = nil
 		*head = aux
 	}
 }

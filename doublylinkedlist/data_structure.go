@@ -11,8 +11,9 @@ type DLNode struct {
 func DisplayList(head *DLNode) {
 	fmt.Printf("The list is: ")
 	for ; head != nil; head = head.Next {
-		fmt.Print(head.Data, " ")
+		fmt.Print(" -> ", head)
 	}
+	fmt.Println()
 	fmt.Println()
 }
 

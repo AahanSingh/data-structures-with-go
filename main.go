@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 
+	"github.com/aahansingh/data-structures-with-go/circularlinkedlist"
 	"github.com/aahansingh/data-structures-with-go/doublylinkedlist"
 	"github.com/aahansingh/data-structures-with-go/linkedlist"
 )
@@ -12,4 +13,6 @@ func main() {
 	linkedlist.RunDemo()
 	fmt.Println("---------- DOUBLY LINKED LIST ---------- ")
 	doublylinkedlist.RunDemo()
+	fmt.Println("---------- CIRCULAR LINKED LIST ---------- ")
+	circularlinkedlist.RunDemo()
 }

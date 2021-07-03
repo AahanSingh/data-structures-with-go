@@ -34,7 +34,6 @@ func Length(head *Node) int {
 		current = current.Next
 		for ; current != head; current = current.Next {
 			len++
-			current = current.Next
 		}
 		return len
 	}

@@ -2,26 +2,26 @@ package stack
 
 import "fmt"
 
-type AStack struct {
+type SStack struct {
 	capacity int
 	top      int
 	data     []int
 }
 
-func CreateArrStack(stack_size int) *AStack {
-	newStack := &AStack{top: -1, capacity: stack_size, data: make([]int, stack_size)}
+func CreateArrStack(stack_size int) *SStack {
+	newStack := &SStack{top: -1, capacity: stack_size, data: make([]int, stack_size)}
 	return newStack
 }
 
-func (s *AStack) isEmpty() bool {
+func (s *SStack) isEmpty() bool {
 	return s.top == -1
 }
 
-func (s *AStack) isFull() bool {
+func (s *SStack) isFull() bool {
 	return s.top == s.capacity-1
 }
 
-func (s *AStack) push(x int) {
+func (s *SStack) push(x int) {
 	fmt.Println("Pushing", x, "to the stack.")
 	if s.isFull() {
 		fmt.Println("Stack Overflow")
@@ -31,7 +31,7 @@ func (s *AStack) push(x int) {
 	(*s).data[(*s).top] = x
 }
 
-func (s *AStack) pop() int {
+func (s *SStack) pop() int {
 	if s.isEmpty() {
 		fmt.Println("Stack Underflow.")
 		return -1
@@ -41,7 +41,7 @@ func (s *AStack) pop() int {
 	return val
 }
 
-func (s *AStack) peek() int {
+func (s *SStack) peek() int {
 	if s.isEmpty() {
 		fmt.Print("Underflow.")
 		return -1

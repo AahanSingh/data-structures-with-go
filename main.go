@@ -19,4 +19,5 @@ func main() {
 	fmt.Println("---------- ARRAY BASED STACK ---------- ")
 	stack.RunAStackDemo()
 	stack.RunDStackDemo()
+	stack.RunListStackDemo()
 }
